@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property(nonatomic,strong)UIAlertController *alertController;
-
+//@property(nonatomic,strong)UIAlertController *alertController;
 
 @end
 
