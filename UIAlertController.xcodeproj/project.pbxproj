@@ -416,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.UIAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.UIAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +502,7 @@
 				72D90B111C166823001B776F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72D90B121C166823001B776F /* Build configuration list for PBXNativeTarget "UIAlertControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +511,7 @@
 				72D90B141C166823001B776F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72D90B151C166823001B776F /* Build configuration list for PBXNativeTarget "UIAlertControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +520,7 @@
 				72D90B171C166823001B776F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
