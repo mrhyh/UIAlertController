@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYT-IV-dUF">
+                                <rect key="frame" x="119" y="183" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="icr-KH-KlC"/>
+                                </constraints>
+                                <state key="normal" title="动作按钮"/>
+                                <connections>
+                                    <action selector="btn2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGk-fs-aRR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-Wk-zGa">
+                                <rect key="frame" x="113" y="238" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="u93-Bt-0vg"/>
+                                </constraints>
+                                <state key="normal" title="警示"/>
+                                <connections>
+                                    <action selector="btn3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3k3-3Q-0dS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htq-Vz-YhL">
+                                <rect key="frame" x="97" y="292" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cdu-J4-d9h"/>
+                                </constraints>
+                                <state key="normal" title="文本对话框"/>
+                                <connections>
+                                    <action selector="btn4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6IZ-r5-P3t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXN-8d-5Yl">
+                                <rect key="frame" x="111" y="349" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ywg-9q-IBG"/>
+                                </constraints>
+                                <state key="normal" title="上拉菜单"/>
+                                <connections>
+                                    <action selector="btn5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0V-jg-fGL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-dw-YC0">
+                                <rect key="frame" x="124" y="130" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DbE-jd-GFy"/>
+                                </constraints>
+                                <state key="normal" title="对话框"/>
+                                <connections>
+                                    <action selector="btn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8EM-JV-3fr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uXN-8d-5Yl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="95" id="0an-gd-twL"/>
+                            <constraint firstItem="uXN-8d-5Yl" firstAttribute="top" secondItem="Htq-Vz-YhL" secondAttribute="bottom" constant="27" id="H0x-4y-tMD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iYT-IV-dUF" secondAttribute="trailing" constant="113" id="Oso-6b-0hA"/>
+                            <constraint firstItem="hMc-Wk-zGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="W2i-Bj-clp"/>
+                            <constraint firstItem="Htq-Vz-YhL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="81" id="W7i-lB-bcE"/>
+                            <constraint firstItem="hMc-Wk-zGa" firstAttribute="top" secondItem="iYT-IV-dUF" secondAttribute="bottom" constant="25" id="XXN-Oc-KmY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hMc-Wk-zGa" secondAttribute="trailing" constant="106" id="ZR0-G5-U3c"/>
+                            <constraint firstItem="ObL-dw-YC0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="108" id="aYg-Ya-5zz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Htq-Vz-YhL" secondAttribute="trailing" constant="101" id="bGo-ZH-l0J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uXN-8d-5Yl" secondAttribute="trailing" constant="113" id="ckW-9m-FqQ"/>
+                            <constraint firstItem="ObL-dw-YC0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="eNA-9P-Ua7"/>
+                            <constraint firstItem="Htq-Vz-YhL" firstAttribute="top" secondItem="hMc-Wk-zGa" secondAttribute="bottom" constant="24" id="mCc-hn-7xf"/>
+                            <constraint firstItem="iYT-IV-dUF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="103" id="nZ6-bh-i9D"/>
+                            <constraint firstItem="iYT-IV-dUF" firstAttribute="top" secondItem="ObL-dw-YC0" secondAttribute="bottom" constant="23" id="xmE-vR-qIF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ObL-dw-YC0" secondAttribute="trailing" constant="126" id="xmZ-Tt-ijY"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="313"/>
         </scene>
     </scenes>
 </document>
