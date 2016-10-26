@@ -98,11 +98,21 @@
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"保存或删除数据" message:@"删除数据将不可恢复" preferredStyle: UIAlertControllerStyleActionSheet];
     
+    //alertController.view.tintColor = [UIColor blueColor]; 可改变部分字体颜色
+    
+    // //可以改变字体大小
+    //    NSMutableAttributedString *hogan = [[NSMutableAttributedString alloc] initWithString:@"Presenting the great... Hulk Hogan!"];
+    //    [hogan addAttribute:NSFontAttributeName
+    //                  value:[UIFont systemFontOfSize:50.0]
+    //                  range:NSMakeRange(24, 11)];
+    //    [alertController setValue:hogan forKey:@"attributedTitle"];
+
+    //改变"style" 就可以改变文字的样式了，只有“UIAlertActionStyleDestructive”样式的字体颜色是红色
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
         NSLog(@"点击了取消");
     }];
     
-    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         NSLog(@"点击了删除");
     }];
     UIAlertAction *archiveAction = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
