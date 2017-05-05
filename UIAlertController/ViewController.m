@@ -35,8 +35,13 @@
 - (IBAction)btn2:(id)sender
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"标题"message:@"这个是UIAlertController的默认样式"preferredStyle:UIAlertControllerStyleAlert];
+    
+    
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [cancelAction setValue:[UIColor grayColor] forKey:@"_titleTextColor"];
+    
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
+    
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
@@ -98,9 +103,9 @@
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"保存或删除数据" message:@"删除数据将不可恢复" preferredStyle: UIAlertControllerStyleActionSheet];
     
-    //alertController.view.tintColor = [UIColor blueColor]; 可改变部分字体颜色
+    alertController.view.tintColor = [UIColor blueColor]; //可部分改变字体颜色
     
-    // //可以改变字体大小
+     //可以改变字体大小
     //    NSMutableAttributedString *hogan = [[NSMutableAttributedString alloc] initWithString:@"Presenting the great... Hulk Hogan!"];
     //    [hogan addAttribute:NSFontAttributeName
     //                  value:[UIFont systemFontOfSize:50.0]

@@ -210,6 +210,7 @@
 				TargetAttributes = {
 					72D90ADE1C166823001B776F = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = VD58PNDPW6;
 					};
 					72D90AFA1C166823001B776F = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -415,10 +416,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VD58PNDPW6;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.UIAlertController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -427,10 +429,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VD58PNDPW6;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.UIAlertController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
