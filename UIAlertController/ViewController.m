@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UILabel+ActionSheet.h"
 
 @interface ViewController ()
 
@@ -31,19 +32,79 @@
     
 }
 
+
+- (UIImage*) createImageWithColor:(UIColor*) color
+{
+    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
+
+#define RGBColor(r, g, b) RGBAColor((r), (g), (b), 1.0f)
+
 //动作按钮点击方法
 - (IBAction)btn2:(id)sender
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"标题"message:@"这个是UIAlertController的默认样式"preferredStyle:UIAlertControllerStyleAlert];
     
-    
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    [cancelAction setValue:[UIColor grayColor] forKey:@"_titleTextColor"];
     
+//    UIImage *accessoryImage = [self createImageWithColor:[UIColor yellowColor]];
+//    [cancelAction setValue:accessoryImage forKey:@"image"];
+    
+    float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (version >= 9.0) {
+        [cancelAction setValue:[UIColor grayColor] forKey:@"_titleTextColor"];
+    }
+    
+    
+    //[cancelAction setValue:[UIColor grayColor] forKey:@"_interactionTintColor"];
+    
+    // 这个方法在iphone5上面会崩溃
+    //[cancelAction setValue:[UIColor grayColor] forKey:@"_titleTextColor"];
+    //    if ([cancelAction valueForKey:@"_titleTextColor"]) {
+    //        [cancelAction setValue:[UIColor grayColor] forKey:@"_titleTextColor"];
+    //    }
+    
+    // 在iphone5没崩溃，但是改变了所有的title的颜色
+    //alertController.view.tintColor = [UIColor grayColor];
+    
+    //[[UIView appearanceWhenContainedIn:[UIAlertController class], nil] setTintColor:[UIColor grayColor]];
+    
+    
+    
+//    unsigned int numIvars; //成员变量个数
+//    Ivar *vars = class_copyIvarList(NSClassFromString(@"UIView"), &numIvars);
+//    //Ivar *vars = class_copyIvarList([UIView class], &numIvars);
+//    
+//    NSString *key=nil;
+//    for(int i = 0; i < numIvars; i++) {
+//        
+//        Ivar thisIvar = vars[i];
+//        key = [NSString stringWithUTF8String:ivar_getName(thisIvar)];  //获取成员变量的名字
+//        NSLog(@"variable name :%@", key);
+//        key = [NSString stringWithUTF8String:ivar_getTypeEncoding(thisIvar)]; //获取成员变量的数据类型
+//        NSLog(@"variable type :%@", key);
+//    }
+//    free(vars);
+    
+    
+
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
+    
+    
+//    UILabel * appearanceLabel = [UILabel appearanceWhenContainedIn:UIAlertController.class, nil];
+//    appearanceLabel.backgroundColor = [UIColor grayColor];
+    //[appearanceLabel setAppearanceFont:[UIFont systemFontOfSize:17.0]];
     
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];
+    
     [self presentViewController:alertController animated:YES completion:nil];
    
 }
@@ -89,6 +150,7 @@
     
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
 - (void)alertTextFieldDidChange:(NSNotification *)notification{
     UIAlertController *alertController = (UIAlertController *)self.presentedViewController;
     if (alertController) {
@@ -98,6 +160,7 @@
         okAction.enabled = login.text.length > 2;
     }
 }
+
 //上拉菜单按钮点击方法，弹出上拉菜单
 - (IBAction)btn5:(id)sender
 {

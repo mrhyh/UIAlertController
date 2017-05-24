@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1806EA9E1ED57F5B005D271F /* UILabel+ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806EA9D1ED57F5B005D271F /* UILabel+ActionSheet.m */; };
+		1806EAA21ED581C6005D271F /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1806EAA11ED581C6005D271F /* 1.png */; };
 		72D90AE41C166823001B776F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D90AE31C166823001B776F /* main.m */; };
 		72D90AE71C166823001B776F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D90AE61C166823001B776F /* AppDelegate.m */; };
 		72D90AEA1C166823001B776F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D90AE91C166823001B776F /* ViewController.m */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1806EA9C1ED57F5B005D271F /* UILabel+ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ActionSheet.h"; sourceTree = "<group>"; };
+		1806EA9D1ED57F5B005D271F /* UILabel+ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ActionSheet.m"; sourceTree = "<group>"; };
+		1806EAA11ED581C6005D271F /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		72D90ADF1C166823001B776F /* UIAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D90AE31C166823001B776F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72D90AE51C166823001B776F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +110,8 @@
 			children = (
 				72D90AE51C166823001B776F /* AppDelegate.h */,
 				72D90AE61C166823001B776F /* AppDelegate.m */,
+				1806EA9C1ED57F5B005D271F /* UILabel+ActionSheet.h */,
+				1806EA9D1ED57F5B005D271F /* UILabel+ActionSheet.m */,
 				72D90AE81C166823001B776F /* ViewController.h */,
 				72D90AE91C166823001B776F /* ViewController.m */,
 				72D90AEB1C166823001B776F /* Main.storyboard */,
@@ -120,6 +127,7 @@
 		72D90AE21C166823001B776F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1806EAA11ED581C6005D271F /* 1.png */,
 				72D90AE31C166823001B776F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -210,7 +218,8 @@
 				TargetAttributes = {
 					72D90ADE1C166823001B776F = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = VD58PNDPW6;
+						DevelopmentTeam = EQHJZ8ZG26;
+						ProvisioningStyle = Automatic;
 					};
 					72D90AFA1C166823001B776F = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -250,6 +259,7 @@
 				72D90AF51C166823001B776F /* LaunchScreen.storyboard in Resources */,
 				72D90AF21C166823001B776F /* Assets.xcassets in Resources */,
 				72D90AED1C166823001B776F /* Main.storyboard in Resources */,
+				1806EAA21ED581C6005D271F /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D90AF01C166823001B776F /* UIAlertController.xcdatamodeld in Sources */,
+				1806EA9E1ED57F5B005D271F /* UILabel+ActionSheet.m in Sources */,
 				72D90AEA1C166823001B776F /* ViewController.m in Sources */,
 				72D90AE71C166823001B776F /* AppDelegate.m in Sources */,
 				72D90AE41C166823001B776F /* main.m in Sources */,
@@ -416,12 +427,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VD58PNDPW6;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EQHJZ8ZG26;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.mimasuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -429,12 +442,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VD58PNDPW6;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EQHJZ8ZG26;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.mimasuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
